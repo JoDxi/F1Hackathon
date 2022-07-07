@@ -1,0 +1,51 @@
+{% extends "main_temp.html" %}
+{% if title %}
+<title> {{ title }} Page </title>
+{% else %}
+<title>Formula 1</title>
+{% endif %}
+
+<div class="container">
+	{% block content %}
+
+	<div class="dropdown">
+		<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" placeholder="Blabla"
+				data-bs-toggle="dropdown" aria-expanded="false">
+			Team
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+			<li><a class="dropdown-item" href="#">Ferrari</a></li>
+			<li><a class="dropdown-item" href="#">Mercedes</a></li>
+			<li><a class="dropdown-item" href="#">Mclaren</a></li>
+			<li><a class="dropdown-item" href="#">Haas</a></li>
+			<li><a class="dropdown-item" href="#">Aston Martin</a></li>
+			<li><a class="dropdown-item" href="#">Alfa Romeo</a></li>
+		</ul>
+	</div>
+
+
+	{% for team in team %}
+	<div class="containerteams">
+		<p class="halltitle"> {{team.team_name}}</p>
+		<p class="subtitle"> Team Boss - {{team.team_boss}}</p>
+		<p class="subtitle"> Drivers - {{team.team_drivers}}</p>
+		<p class="subtitle"> World Championship wins - {{team.team_wins}}</p>
+		<p class="subtitle"> {{team.team_description}}</p>
+
+	</div>
+	<br>
+	{% endfor %}
+</div>
+
+
+{% endblock content %}
+
+
+
+<!--	<h4>&ndash;&gt;-->
+<!--		Team - {{team.team_name}}|-->
+<!--		Boss - {{team.team_boss}}|-->
+<!--		Drivers - {{team.team_drivers}}|-->
+<!--		N. wins - {{team.team_wins}}|-->
+<!--		Desc - {{team.team_description}}|-->
+<!--	</h4>

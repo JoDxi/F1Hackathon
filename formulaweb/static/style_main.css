@@ -1,0 +1,80 @@
+body {
+    background-image: url("f1backblack.jpg");
+    background-size: contain;
+}
+
+
+.halltitle, .hometitle, .teamtitle {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.subtitle{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.hometext {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+
+h5 {
+    font-weight: bolder;
+}
+
+.description {
+    font-weight: bold;
+    color: black;
+}
+
+.homecards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    box-shadow: 3px 6px 8px 0 black;
+}
+
+.card:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+.card-header {
+    background-color: grey;
+    font-weight: bold;
+}
+
+.card.quote {
+    display: flex;
+    box-shadow: 3px 6px 8px 0 black;
+    max-width: 60%;
+}
+
+.content-section {
+    color: white;
+    max-width: 30rem;
+    padding-bottom: 5rem;
+
+
+}
+
+.form-control-label {
+    padding-bottom: 1rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
